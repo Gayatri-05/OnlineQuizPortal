@@ -31,10 +31,6 @@ public class QuestionService {
 		return sList;
 	}
 	
-//	public Question addQuestion(Question que) {
-//		return qRepo.save(que);
-//	}
-	
 	public Question getQuestionById(int id) {
 		if (qRepo.findById(id).isPresent())
 			return qRepo.findById(id).get();
@@ -45,9 +41,6 @@ public class QuestionService {
 	public List<Question> getAllQuestion() {
 		return qRepo.findAll();
 	}
-//	public Quiz addQuiz(Quiz que) {
-//		return qzRepo.save(que);
-//	}
 	
 	public List<Result> getAllResults() {
 		return rRepo.findAll();
