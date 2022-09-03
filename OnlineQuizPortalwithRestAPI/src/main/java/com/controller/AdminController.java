@@ -92,15 +92,6 @@ public class AdminController {
 	public Question findQuestion(@PathVariable("ques_id") int ques_id) {
 		return qService.getQuestionById(ques_id);
 	}
-	
-//	@PostMapping("/createquiz")
-//	public ResponseEntity<Quiz> addQuiz(@RequestBody Quiz qu) {
-//		Quiz quiz = qService.addQuiz(qu);
-//		if (quiz != null)
-//			return new ResponseEntity<Quiz>(quiz, HttpStatus.CREATED);
-//		else
-//			return new ResponseEntity<Quiz>(quiz, HttpStatus.INTERNAL_SERVER_ERROR);
-//	}
 
 	@PostMapping(value="createQuiz",consumes=MediaType.APPLICATION_JSON_VALUE)
 	public String createQuiz(@RequestBody Quiz q) {
